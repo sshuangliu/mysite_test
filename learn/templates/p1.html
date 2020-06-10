@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>p1页面</title>
+</head>
+
+<body>
+<h2>p1页面</h2>
+
+<select id="cityChoose">
+    <option>上海</option>
+    <option>北京</option>
+</select>
+<input type="button" value="添加" onclick="popupFunc();"/>
+
+<script>
+    popupFunc = function () {
+        window.open('/p2/', 'p2', "status=1, height:100, width:100, toolbar=0, resizeable=1")
+      //open(url, name, 窗口参数)，注意name不能重名
+    };
+
+    callback = function (city) {
+        var opt = document.createElement('option');
+        opt.innerText = city;
+        opt.setAttribute('selected', 'selected');
+        var selEle = document.getElementById('cityChoose');
+        selEle.appendChild(opt);
+    }
+</script>
+</body>
+</html>
