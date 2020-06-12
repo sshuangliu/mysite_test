@@ -34,3 +34,7 @@ git add .
 
 git client update:
 git update-git-for-windows
+
+new ssh-key pair:
+path: home/.ssh
+$ ssh-keygen -t rsa -C "youremail@example.com"
