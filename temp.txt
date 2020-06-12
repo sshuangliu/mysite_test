@@ -5,3 +5,16 @@ python manage.py makemigrations
 python manage.py migrate
 
 python manage.py runserver 0.0.0.0:8001
+
+#https://www.cnblogs.com/kevingrace/p/5690241.html
+echo "# mysite_test" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin git@github.com:sshuangliu/mysite_test.git
+git push -u origin master
+
+git rm *.pyc --cached
+
+git status
+git add .
